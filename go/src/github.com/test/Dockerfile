@@ -5,6 +5,7 @@ WORKDIR /app
 ENV SRC_DIR=/SRC
 # Add the source code:
 COPY ./assignment/* $SRC_DIR/
+COPY ./.movieAPIKey /app/
 # Build it:
 RUN cd $SRC_DIR; go build -o movie_rating; cp movie_rating /app/
 #RUN cd $SRC_DIR; cp movie_rating /app/

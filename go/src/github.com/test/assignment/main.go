@@ -46,8 +46,8 @@ func inputArg() string {
 func GetAPIKey() string {
 	//file, err := os.Open("/Users/sichekur/.movieAPIKey")
 	//file, err := os.Open("C:\\Users\\sichekur\\go\\src\\github.com\\test\\assignment\\.movieAPIKey")
-	file, err := os.Open("/SRC/.movieAPIKey")
-	//file, err := os.Open(".movieAPIKey")
+	//file, err := os.Open("/Users/sichekur/go/src/cxcloud_assignment/go/src/github.com/test/.movieAPIKey")
+	file, err := os.Open(".movieAPIKey")
 	if err != nil {
 		fmt.Println(err)
 	}
