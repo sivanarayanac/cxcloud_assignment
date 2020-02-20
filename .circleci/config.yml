@@ -27,16 +27,16 @@ jobs:
       # specify any bash command here prefixed with `run: `
       #- run: go get -v -t -d ./...
       - run: 
-        command: echo Hello test CircleCI 
+          command: echo Hello test CircleCI 
       - run: 
-        command: go build cxc go/src/github.com/test/assignment/main.go
+          command: go build cxc go/src/github.com/test/assignment/main.go
       - run: 
-        command: go test -v go/src/github.com/test/assignment/
+          command: go test -v go/src/github.com/test/assignment/
       - run: 
-        command: go test -v -cover  go/src/github.com/test/assignment/
+          command: go test -v -cover  go/src/github.com/test/assignment/
       - store_test_results:
-        path: test-results
-        # TO DO change the test results to correct directory 
+          path: test-results
+          # TO DO change the test results to correct directory 
       
 
 
