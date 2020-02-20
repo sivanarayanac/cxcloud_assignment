@@ -31,7 +31,7 @@ jobs:
       - run: 
           command: go build -o cxc go/src/github.com/test/assignment/main.go
       - run: 
-          command: go test -v go/src/github.com/test/assignment/
+          command: go test -v go/src/github.com/test/assignment/main.go
       - run: 
           command: go test -v -cover  go/src/github.com/test/assignment/
       - store_test_results:
