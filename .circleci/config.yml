@@ -27,9 +27,20 @@ jobs:
       # specify any bash command here prefixed with `run: `
       #- run: go get -v -t -d ./...
       - run: 
-          command: echo Hello test CircleCI 
+          command: echo Hello test CircleCI
+      - run:
+          name: PWD
+          command: | 
+            echo $PWD
+            ls -al 
+            whoami 
+            df 
+
+      - run:
+          name: Print the Current Time
+          command: date     
       - run: 
-          command: go build -o cxc go/src/github.com/test/assignment/main.go
+          command: go build -o cxc go/src/github.com/test/assignment/main.go Frozen
       - run: 
           command: go test -v go/src/github.com/test/assignment/main_test.go
       - run: 
@@ -38,5 +49,3 @@ jobs:
           path: test-results
           # TO DO change the test results to correct directory 
       
-
-
