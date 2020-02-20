@@ -29,7 +29,7 @@ jobs:
       - run: 
           command: echo Hello test CircleCI 
       - run: 
-          command: go build cxc go/src/github.com/test/assignment/main.go
+          command: go build -o cxc go/src/github.com/test/assignment/main.go
       - run: 
           command: go test -v go/src/github.com/test/assignment/
       - run: 
