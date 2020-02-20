@@ -25,12 +25,17 @@ jobs:
       - store_test_results:
         path: test-results
         # TO DO change the test results to correct directory 
+      
       # specify any bash command here prefixed with `run: `
       #- run: go get -v -t -d ./...
-      - run: echo Hello test CircleCI 
-      - run: go build cxc go/src/github.com/test/assignment/main.go
-      - run: go test -v go/src/github.com/test/assignment/
-      - run: go test -v -cover  go/src/github.com/test/assignment/
+      - run: 
+        command: echo Hello test CircleCI 
+      - run: 
+        command: go build cxc go/src/github.com/test/assignment/main.go
+      - run: 
+        command: go test -v go/src/github.com/test/assignment/
+      - run: 
+        command: go test -v -cover  go/src/github.com/test/assignment/
       
 
 
