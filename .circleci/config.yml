@@ -22,9 +22,7 @@ jobs:
     working_directory: /go/src/github.com/sivanarayanac/cxcloud_assignment
     steps:
       - checkout
-      - store_test_results:
-        path: test-results
-        # TO DO change the test results to correct directory 
+      
       
       # specify any bash command here prefixed with `run: `
       #- run: go get -v -t -d ./...
@@ -36,6 +34,9 @@ jobs:
         command: go test -v go/src/github.com/test/assignment/
       - run: 
         command: go test -v -cover  go/src/github.com/test/assignment/
+      - store_test_results:
+        path: test-results
+        # TO DO change the test results to correct directory 
       
 
 
